@@ -1,3 +1,4 @@
 site_name: Aliyun 计算巢 x CloudPaw
+site_description: CloudPaw - 基于 CoPaw 的阿里云 AI 助手，帮助个人开发者利用阿里云资源进行开发与运维
 theme: 
   name: aliyuncomputenest
