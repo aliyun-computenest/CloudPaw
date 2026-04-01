@@ -1,3 +1,4 @@
+![image.png](cloudpaw.png)
 # CloudPaw 服务简介
 
 CloudPaw 是一款基于 [CoPaw](https://copaw.agentscope.io/) 开发的阿里云 AI 助手，帮助个人开发者利用阿里云资源进行开发与运维工作。部署在你自己的环境中：
