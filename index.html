@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="计算巢是阿里云开放给企业应用服务商的服务管理平台。服务商能够在计算巢上发布私有化部署服务，为其客户提供云上软件一键部署的能力；同时也支持全托管模式的服务，赋能服务商托管其客户资源。">
+  <title>Home - Aliyun 计算巢 x CloudPaw</title>
+
+  <link rel="shortcut icon" href="img/favicon.ico">
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+  <link rel="stylesheet" href="css/theme.css">
+  
+
+  
+
+  
+  
+
+  
+    <script src="search/main.js"></script>
+  
+
+  
+
+  <script src="js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="nav-inner">
+        <div class="logo">
+          <img src="./img/logo-2x.png">
+        </div>
+        <div class="nav-list">
+          <ul>
+          
+              <li><a href="#cloudpaw">CloudPaw 服务使用说明</a></li>
+              
+                  <li><a href="#_1">概述</a></li>
+                  
+              
+                  <li><a href="#_2">部署流程</a></li>
+                  
+              
+                  <li><a href="#_3">验证结果</a></li>
+                  
+              
+                  <li><a href="#cloudpaw_1">使用 CloudPaw</a></li>
+                  
+              
+                  <li><a href="#_4">常见问题</a></li>
+                  
+                      <li class="li-h3"><a href="#_5">如何配置百炼其他模型？</a></li>
+                  
+              
+                  <li><a href="#_6">联系我们</a></li>
+                  
+              
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="content theme-github">
+      
+      <div class="content-inner">        
+        
+        <p align="center">
+  <img src="cloudpaw.png" alt="CloudPaw Logo" width="400"/>
+</p>
+
+<h1 id="cloudpaw">CloudPaw 服务使用说明</h1>
+<h2 id="_1">概述</h2>
+<p>CloudPaw 是 <a href="https://copaw.agentscope.io/">CoPaw</a> 衍生出的阿里云 AI 助手，融合 <strong>CoPaw + Aliyun CLI</strong> 两大核心组件，并深度集成 <strong>ROS（资源编排）</strong> 能力——它不是简单的聊天机器人，而是一个具备云原生执行引擎的智能助手。</p>
+<p>只需用自然语言描述你的需求，CloudPaw 就能自动完成从资源创建到应用部署的全流程。例如：</p>
+<ul>
+<li><strong>一句话搭建应用</strong>：告诉 CloudPaw "帮我搭建一个私有网盘"，它会自动创建 ECS 实例、配置安全组、部署应用并返回可访问的地址。</li>
+<li><strong>个人站点秒级上线</strong>：描述你想要的页面内容和风格，CloudPaw 自动生成代码、部署到云端、绑定公网访问。</li>
+<li><strong>API 服务快速发布</strong>：指定接口定义，CloudPaw 完成从代码生成、容器构建到服务暴露的整个链路。</li>
+</ul>
+<p>CloudPaw 完全部署在您自己的环境中，数据安全可控。本文向您介绍如何通过计算巢快速部署 CloudPaw 服务，以及基本使用说明。</p>
+<h2 id="_2">部署流程</h2>
+<ol>
+<li>
+<p>访问计算巢 CloudPaw <a href="https://computenest.console.aliyun.com/service/instance/create/cn-hangzhou?spm=5176.24779694.0.0.48ab4d22uORwmU&amp;type=user&amp;ServiceId=service-ea1d139a460a4a9ea649">部署链接</a>，直接点击 <strong>下一步：确认订单</strong>：</p>
+<p><img src="1.png" alt="部署入口" width="680" style="margin: 12px 0;"/></p>
+</li>
+<li>
+<p>在订单确认页，核对实例费用，点击 <strong>立即创建</strong> 开始自动部署：</p>
+<p><img src="2.png" alt="确认订单" width="680" style="margin: 12px 0;"/></p>
+</li>
+<li>
+<p>部署完成后，在服务实例详情页获取访问地址、用户名和密码：</p>
+<p><img src="3.png" alt="获取访问地址" width="680" style="margin: 12px 0;"/></p>
+</li>
+<li>
+<p>访问服务地址，输入上一步获取的用户名和密码，阅读并同意使用协议后，点击 <strong>登录</strong>：</p>
+<p><img src="4.png" alt="登录页面" width="680" style="margin: 12px 0;"/></p>
+</li>
+<li>
+<p>配置百炼 API Key（<a href="https://bailian.console.aliyun.com/cn-beijing/?tab=globalset#/efm/api_key">获取百炼 API Key</a>），也可选择其他模型服务，请按需配置：</p>
+<p><img src="5.png" alt="配置API Key" width="680" style="margin: 12px 0;"/></p>
+</li>
+<li>
+<p>配置模型，请按需选择合适的模型：</p>
+<p><img src="6.png" alt="配置模型" width="680" style="margin: 12px 0;"/></p>
+</li>
+</ol>
+<h2 id="_3">验证结果</h2>
+<p>部署完成后，使用<strong>阿里云编排 Agent</strong>（默认）进行对话，验证服务是否正常运行：</p>
+<p><img src="7.png" alt="使用界面" width="680" style="margin: 12px 0;"/></p>
+<h2 id="cloudpaw_1">使用 CloudPaw</h2>
+<p>您可以尝试以下示例场景，体验 CloudPaw 的能力：</p>
+<p><strong>场景一：快速搭建私有网盘</strong></p>
+<blockquote>
+<p>我想快速搭建一个私有网盘服务，能够通过网页访问、上传下载文件、管理用户权限，并支持基本的文档在线预览功能。我希望整个部署过程尽量简化，不需要手动配置服务器环境、安装依赖或调试Web服务，而是通过一种自动化的方式完成应用的初始化和基础设置。部署完成后，我希望能直接通过浏览器访问网盘首页，使用默认管理员账号登录并开始使用，同时确保数据存储具备基本的持久性，不会因服务重启而丢失。</p>
+</blockquote>
+<p><strong>场景二：创建个人主页并上线</strong></p>
+<blockquote>
+<p>我叫 StackWalker，帮我创建一个个人主页并上线到云端。我希望页面包含：个人介绍、技能、项目经历、联系方式。风格尽量简洁清爽，适配手机和电脑。</p>
+</blockquote>
+<p><strong>场景三：快速发布 API 服务</strong></p>
+<blockquote>
+<p>我叫 StackWalker，帮我把一个 API 服务快速发布到云端。我希望默认提供 /health 和 /hello 两个接口，并给我可直接调用的地址和示例请求，配置尽量简单清晰。</p>
+</blockquote>
+<h2 id="_4">常见问题</h2>
+<h3 id="_5">如何配置百炼其他模型？</h3>
+<p>进入 <strong>设置 &gt; 模型 &gt; 添加模型</strong>，输入模型 ID 后点击创建即可：</p>
+<p><img src="9.png" alt="添加模型" width="680" style="margin: 12px 0;"/></p>
+<h2 id="_6">联系我们</h2>
+<p>遇到问题或有任何建议，欢迎通过以下方式联系我们：</p>
+<p><img src="8.png" alt="联系方式" width="200" style="margin: 12px 0;"/></p>
+        
+      </div>
+
+      <div class="copyrights">© 2009-2022 Aliyun.com 版权所有</div>
+    </div>
+  </div>
+  
+  <!--
+  MkDocs version      : 1.6.1
+  Docs Build Date UTC : 2026-04-01 09:49:04.311193+00:00
+  -->
+</body>
+</html>
