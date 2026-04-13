@@ -5,7 +5,7 @@
 # CloudPaw 服务使用说明
 
 ## 概述
-CloudPaw 是 [CoPaw](https://copaw.agentscope.io/) 衍生出的阿里云 AI 助手，融合 **CoPaw + Aliyun CLI** 两大核心组件，并深度集成 **ROS（资源编排）** 能力——它不是简单的聊天机器人，而是一个具备云原生执行引擎的智能助手。
+CloudPaw 是 [QwenPaw](https://qwenpaw.agentscope.io/) 衍生出的阿里云 AI 助手，融合 **QwenPaw + Aliyun CLI** 两大核心组件，并深度集成 **ROS（资源编排）** 能力——它不是简单的聊天机器人，而是一个具备云原生执行引擎的智能助手。
 
 只需用自然语言描述你的需求，CloudPaw 就能自动完成从资源创建到应用部署的全流程。例如：
 
